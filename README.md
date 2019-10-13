@@ -118,7 +118,7 @@ _this is the recommended way to run remark42_
 | avatar.bolt.file        | AVATAR_BOLT_FILE        | `./var/avatars.db`       | file name for  `bolt` store                      |
 | avatar.uri              | AVATAR_URI              | `./var/avatars`          | avatar store uri                                 |
 | avatar.rsz-lmt          | AVATAR_RSZ_LMT          | `0` (disabled)           | max image size for resizing avatars on save      |
-| image.type              | IMAGE_TYPE              | `fs`                     | type of image storage, `fs`, `bolt`              |
+| image.type              | IMAGE_TYPE              | `fs`                     | type of image storage, `fs`                      |
 | image.max-size          | IMAGE_MAX_SIZE          | `5000000`                | max size of image file                           |
 | image.fs.path           | IMAGE_FS_PATH           | `./var/pictures`         | permanent location of images                     |
 | image.fs.staging        | IMAGE_FS_STAGING        | `./var/pictures.staging` | staging location of images                       |

@@ -118,15 +118,12 @@ type StoreGroup struct {
 
 // ImageGroup defines options group for store pictures
 type ImageGroup struct {
-	Type string `long:"type" env:"TYPE" description:"type of storage" choice:"fs" choice:"bolt" default:"fs"`
+	Type string `long:"type" env:"TYPE" description:"type of storage" choice:"fs" default:"fs"`
 	FS   struct {
 		Path       string `long:"path" env:"PATH" default:"./var/pictures" description:"images location"`
 		Staging    string `long:"staging" env:"STAGING" default:"./var/pictures.staging" description:"staging location"`
 		Partitions int    `long:"partitions" env:"PARTITIONS" default:"100" description:"partitions (subdirs)"`
 	} `group:"fs" namespace:"fs" env-namespace:"FS"`
-	Bolt struct {
-		File string `long:"file" env:"FILE" default:"./var/pictures.db" description:"images bolt file location"`
-	} `group:"bolt" namespace:"bolt" env-namespace:"bolt"`
 	MaxSize      int `long:"max-size" env:"MAX_SIZE" default:"5000000" description:"max size of image file"`
 	ResizeWidth  int `long:"resize-width" env:"RESIZE_WIDTH" default:"800" description:"width of resized image"`
 	ResizeHeight int `long:"resize-height" env:"RESIZE_HEIGHT" default:"300" description:"height of resized image"`
